@@ -13,7 +13,7 @@ Los archivos JSON se escriben con orden estable de generación, sin timestamps v
 
 La CI comprueba Python 3.11 y 3.12, compila los módulos, ejecuta pruebas y genera la demo. Cambiar semilla produce otro escenario, sin representar una población real.
 
-Para cambiar periodo, usar `calculate(data, config, start, end)` desde Python; sus límites son inclusivos. La CLI v0.1.0 genera y evalúa el periodo completo del escenario. Un rango fuera de cobertura se marca incompleto.
+Para cambiar periodo, usar `calculate(data, config, start, end)` desde Python; sus límites son inclusivos. La CLI `demo` genera y evalúa el periodo completo del escenario. Un rango fuera de cobertura se marca incompleto.
 
 ## Dashboard v0.2.0
 

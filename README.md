@@ -88,7 +88,7 @@ Datos sintéticos → validación → últimas revisiones → eventos canónicos
   → escalamiento fijo → JSON auditable + informe HTML
 ```
 
-El motor es independiente de la interfaz. El MVP prioriza una ejecución simple y verificable; la arquitectura futura incluye SQL/DuckDB y una interfaz interactiva cuando aporten valor.
+El motor es independiente de la interfaz. El dashboard consulta una exportación auditable y verifica su agregación contra Python; SQL/DuckDB permanece como ampliación para análisis de mayor volumen.
 
 ## Calidad y reproducibilidad
 
