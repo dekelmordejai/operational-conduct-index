@@ -4,6 +4,8 @@
 
 [English](README.en.md) · [Metodología](docs/methodology.md) · [Arquitectura](docs/architecture.md) · [Roadmap](docs/roadmap.md)
 
+**[Explorar el dashboard interactivo →](https://dekelmordejai.github.io/operational-conduct-index/)**
+
 > Proyecto independiente de portafolio. Datos 100% sintéticos. No es un producto oficial ni está conectado a sistemas de transporte, autoridades o datos de personas reales. La metodología de la demo es ilustrativa y no está calibrada para decisiones laborales.
 
 ## El problema
@@ -14,7 +16,7 @@ Este proyecto conserva la evidencia, produce una sola contribución por evento y
 
 **Ejemplo:** un reporte operativo de 8 puntos y una infracción válida de 2 puntos comparten una referencia explícita. La política demostrativa `H > I > R` conserva ambos registros y asigna 2 puntos al componente I; no suma 10 ni compara severidades de unidades distintas.
 
-## Qué funciona en v0.1.0
+## Qué funciona en v0.2.0
 
 - Generador con semilla: 17 empresas, 8 rutas ficticias, 136 operadores y 365 días.
 - Validación de catálogos, identidades, estados, revisiones y exposición.
@@ -23,8 +25,22 @@ Este proyecto conserva la evidencia, produce una sola contribución por evento y
 - Acumulados individuales, sin afirmar comparabilidad por exposición.
 - Referencias fijas versionadas, hashes de entradas y explicación por evento.
 - Informe HTML local, JSON de auditoría y pruebas automatizadas.
+- Dashboard adaptable con filtros de periodo, empresa y línea; evolución mensual/semanal; comparación de tasas; búsqueda, paginación, detalle de evidencia y exportaciones CSV.
+- Despliegue del dashboard en GitHub Pages después de superar CI; sin APIs ni dependencias de interfaz externas.
 
-**Pendiente:** vinculación aproximada, revisión interactiva, instantáneas históricas por fecha de conocimiento, DuckDB/Parquet, API y dashboard interactivo. Consulta [las limitaciones](docs/limitations-and-responsible-use.md).
+**Pendiente:** vinculación aproximada, resolución interactiva de conflictos, instantáneas históricas por fecha de conocimiento, DuckDB/Parquet y API. Consulta [las limitaciones](docs/limitations-and-responsible-use.md).
+
+## Dashboard interactivo
+
+Abre la [demo pública](https://dekelmordejai.github.io/operational-conduct-index/) o `dashboard/index.html` directamente en tu navegador. Los datos ya están incluidos; funciona sin servidor, credenciales o descargas externas.
+
+- Filtra por año, trimestre o rango personalizado, empresa y línea.
+- Explora evolución mensual o semanal del ICO y del conteo de eventos elegibles.
+- Compara empresas o líneas con tasas por 100 000 km y abre una entidad para filtrar.
+- Busca eventos y revisa qué fuente contribuyó y cuáles se conservaron como evidencia.
+- Descarga el resumen del ámbito o los eventos filtrados en CSV.
+
+El motor Python resuelve eventos y exporta la evidencia. El navegador agrega esas contribuciones y la exposición bajo la misma política; 12 escenarios verifican paridad con el motor. [Detalles y reproducción](docs/dashboard.md).
 
 ## Ejecutar desde cero
 
@@ -78,7 +94,7 @@ El motor es independiente de la interfaz. El MVP prioriza una ejecución simple 
 
 La suite comprueba ejemplos manuales, exclusividad, falsas fusiones, revocación, invariancia por división de empresas, proporcionalidad de exposición, monotonicidad con referencia fija, datos incompletos y un año sintético completo.
 
-La CI ejecuta pruebas en Python 3.11 y 3.12 y genera la demo sin dependencias de ejecución externas. La misma semilla y configuración producen los mismos archivos JSON. [Reproducibilidad](docs/reproducibility.md).
+La CI ejecuta 32 pruebas en Python 3.11 y 3.12, 12 escenarios de paridad del dashboard y la generación reproducible de datos. La misma semilla y configuración producen los mismos archivos JSON. [Reproducibilidad](docs/reproducibility.md).
 
 ## Uso profesional
 

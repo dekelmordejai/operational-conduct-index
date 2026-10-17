@@ -4,6 +4,14 @@ An independent portfolio project demonstrating auditable event integration and e
 
 **All data is synthetic.** This is not an official institutional product, a production integration, or a calibrated employment decision tool.
 
+**[Open the interactive dashboard →](https://dekelmordejai.github.io/operational-conduct-index/)**
+
+## Interactive dashboard · v0.2.0
+
+Filter by date range, company and route; inspect monthly or weekly trends, compare exposure-adjusted rates and open each event's evidence. Export the current summary and filtered events as CSV. The responsive interface runs entirely in the browser with bundled synthetic data and no external libraries or API calls. You can also open `dashboard/index.html` offline.
+
+Python resolves canonical events. Browser aggregation is verified against the Python engine across 12 scenarios, including partial periods and incomplete data. The full Python suite contains 32 tests. GitHub Pages deploys the dashboard after CI succeeds. [Dashboard documentation](docs/dashboard.md).
+
 ## Working demonstration
 
 The standard-library Python engine generates a seeded fictional year (17 companies, 8 routes, 136 operators), validates records, collapses retries, selects latest revisions, links explicit incident references and applies one exclusive contribution per incident.
@@ -24,7 +32,7 @@ The demonstration weights R (operating reports) at 30%, H (traffic incidents) at
 
 ## Explicit limits
 
-No fuzzy matching, live institutional APIs, interactive adjudication, as-of historical reconstruction or individual exposure estimation. The generator's shared references are inputs to exact linkage, not evidence of entity-resolution accuracy. DuckDB/Parquet and an interactive dashboard remain roadmap items.
+No fuzzy matching, live institutional APIs, interactive adjudication, as-of historical reconstruction or individual exposure estimation. The generator's shared references are inputs to exact linkage, not evidence of entity-resolution accuracy. DuckDB/Parquet remain roadmap items.
 
 Read [architecture](docs/architecture.md), [methodology](docs/methodology.md), [decisions](docs/methodology-gaps.md), [data dictionary](docs/data-dictionary.md) and [roadmap](docs/roadmap.md). Technical documentation is currently in Spanish.
 
