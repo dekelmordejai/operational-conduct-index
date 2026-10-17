@@ -1,0 +1,12 @@
+{
+  "version": "demo-v1",
+  "weights": {"R": 0.3, "H": 0.3, "I": 0.4},
+  "precedence": ["H", "I", "R"],
+  "rate_base": 100000,
+  "reference_caps": {"R": 150, "H": 100, "I": 100},
+  "reference_id": "illustrative-fixed-zero-baseline-v1",
+  "injury_factor": 1.5,
+  "report_points": {"RO-01": 1, "RO-02": 2, "RO-03": 4, "RO-04": 8},
+  "infringement_points": {"IF-01": 1, "IF-02": 2},
+  "traffic_points": {"HT-01": 1, "HT-02": 2, "HT-03": 3}
+}

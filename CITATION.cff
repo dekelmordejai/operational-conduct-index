@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the repository URL and the exact commit used to reproduce results."
+title: "Operational Conduct Index: synthetic and auditable transport analytics"
+type: software
+version: 0.1.0
+date-released: 2026-10-16
+license: MIT
+repository-code: "https://github.com/dekelmordejai/operational-conduct-index"
+authors:
+  - name: "dekelmordejai"
